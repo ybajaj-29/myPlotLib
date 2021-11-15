@@ -1,2 +1,3 @@
 # MyPlotLib
-In a nutshell: taking data from aesthetically displeasing figures and trying to make them look better.
+Taking data from aesthetically displeasing figures and trying to make them look better.
+Follow along with matplotlib and numpy.
