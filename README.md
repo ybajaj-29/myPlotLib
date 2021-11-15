@@ -1,2 +1,2 @@
 # MyPlotLib
-Redefining data visualization, one significantly-more-aesthetically-pleasing figure at a time.
+Redefining third-party software-generated data visualization, one significantly-more-aesthetically-pleasing figure at a time.
