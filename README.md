@@ -1,2 +1,2 @@
 # MyPlotLib
-Taking data from aesthetically displeasing figures and and trying to make them look better.
+Redefining data visualization, one significantly-more-aesthetically-pleasing figure at a time.
