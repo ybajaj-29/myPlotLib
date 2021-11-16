@@ -16,7 +16,7 @@ s_param = []
 def graph_display(file_Name):
     for file_name in os.listdir('.'):
         if fnmatch.fnmatch(file_name, file_Name):
-            print('Displaying S-parameter plot for: ' + file_Name)
+            print('\nDisplaying S-parameter plot for: ' + file_Name)
             file = open(file_Name, 'r')
             data = file.read().splitlines()
             file.close()
@@ -25,10 +25,11 @@ def graph_display(file_Name):
                 freq.append(float(split_col[0]))
                 s_param.append(float(split_col[1]))
                 
-            plt.plot(freq, s_param, color='blue', label=file_Name[0:3])
+            plt.plot(freq, s_param, color='blue', linestyle='dashed', label=file_Name[0:3])
             plt.tight_layout()
             
-            plt.legend(loc='lower right', bbox_to_anchor=(0.5, 0.025, 0.5, 0.5), fontsize=18, borderpad=0.8, edgecolor='green', handlelength=3)
+            plt.legend(loc='lower right', bbox_to_anchor=(0.5, 0.025, 0.5, 0.5), fontsize=18, borderpad=0.8, edgecolor='black', handlelength=3)
+            plt.tick_params(length=12, width=1.5, pad=10, direction='inout')
 
             plt.xlabel('Frequency (Hz)', labelpad=20, fontname='Arial', fontsize=24, fontweight='bold')
             plt.xticks(np.arange(min(freq), max(freq), 1000000000*0.75), fontsize=18)
@@ -38,7 +39,10 @@ def graph_display(file_Name):
             plt.gca().get_xticklabels()[23].set_fontweight('bold')
 
             plt.ylabel('S-parameter (dB)', labelpad=20, fontname='Arial', fontsize=24, fontweight='bold')
-            plt.yticks(np.arange(max(s_param), min(s_param)-2, -2), fontsize=18)
+            plt.yticks(np.arange(max(s_param), min(s_param)-1, -2), fontsize=18)
+            
+            print('\nMinimum S-parameter (dB): ' + str(min(s_param)))
+            print('Maximum S-parameter (dB): ' + str(max(s_param)))
             
             plt.show()
             freq.clear()
@@ -47,4 +51,4 @@ def graph_display(file_Name):
 # A typical file handle I manually save after running studies on COMSOL Multiphysics 5.5 (file_Name).
 # Usually designated by a date at the suffix so I don't lose track after hundreds of studies.
 # After COMSOL adds a Python API, I plan to revisit this so manual saving isn't requisite.
-graph_display('S11_param.txt')
+graph_display('S21_param.txt')
