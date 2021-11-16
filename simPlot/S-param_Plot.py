@@ -16,7 +16,7 @@ s_param = []
 def graph_display(file_Name):
     for file_name in os.listdir('.'):
         if fnmatch.fnmatch(file_name, file_Name):
-            print('Displaying S-parameter plot for: ' + file_Name)
+            print('\nDisplaying S-parameter plot for: ' + file_Name)
             file = open(file_Name, 'r')
             data = file.read().splitlines()
             file.close()
