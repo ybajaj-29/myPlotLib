@@ -21,7 +21,7 @@ def graph_display(file_Name):
             data = file.read().splitlines()
             file.close()
             for i in data:
-                split_col = i.split(' ')
+                split_col = i.split()
                 freq.append(float(split_col[0]))
                 s_param.append(float(split_col[1]))
                 
