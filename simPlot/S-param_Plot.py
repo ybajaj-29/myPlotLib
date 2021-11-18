@@ -50,5 +50,4 @@ def graph_display(file_Name):
         
 # A typical file handle I manually save after running studies on COMSOL Multiphysics 5.5 (file_Name).
 # Usually designated by a date at the suffix so I don't lose track after hundreds of studies.
-# After COMSOL adds a Python API, I plan to revisit this so manual saving isn't requisite.
 graph_display('S11_param.txt')
