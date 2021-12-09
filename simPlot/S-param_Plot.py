@@ -26,20 +26,21 @@ def graph_display(file_Name):
                 s_param.append(float(split_col[1]))
                 
             plt.plot(freq, s_param, color='blue', linestyle='dashed', label=file_Name[0:3])
+            plt.grid(visible=True)
             plt.tight_layout()
             
-            plt.legend(loc='lower right', bbox_to_anchor=(0.5, 0.025, 0.5, 0.5), fontsize=18, borderpad=0.8, edgecolor='black', handlelength=3)
+            plt.legend(loc='lower right', bbox_to_anchor=(0.5, 0.025, 0.5, 0.5), fontsize=9, borderpad=0.8, edgecolor='black', handlelength=3)
             plt.tick_params(length=12, width=1.5, pad=10, direction='inout')
 
-            plt.xlabel('Frequency (Hz)', labelpad=20, fontname='Arial', fontsize=24, fontweight='bold')
-            plt.xticks(np.arange(min(freq), max(freq), 1000000000*0.75), fontsize=18)
+            plt.xlabel('Frequency (Hz)', labelpad=8, fontname='Arial', fontsize=12, fontweight='bold')
+            plt.xticks(np.arange(min(freq), max(freq), 1000000000*0.75), fontsize=9)
             plt.gca().get_xticklabels()[0].set_color('red')
             plt.gca().get_xticklabels()[0].set_fontweight('bold')
             plt.gca().get_xticklabels()[23].set_color('red')
             plt.gca().get_xticklabels()[23].set_fontweight('bold')
 
-            plt.ylabel('S-parameter (dB)', labelpad=20, fontname='Arial', fontsize=24, fontweight='bold')
-            plt.yticks(np.arange(max(s_param), min(s_param)-1, -2), fontsize=18)
+            plt.ylabel('S-parameter (dB)', labelpad=8, fontname='Arial', fontsize=12, fontweight='bold')
+            plt.yticks(np.arange(max(s_param), min(s_param)-1, -2), fontsize=9)
             
             print('\nMinimum S-parameter (dB): ' + str(min(s_param)))
             print('Maximum S-parameter (dB): ' + str(max(s_param)))
