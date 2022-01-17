@@ -1,14 +1,15 @@
 // Stretched Exponential (KWW) Function - Parametric Fitting
 // Will be interfaced with Gnuplot.py
-```diff
 
-+ gnuplot
+gnuplot
 reset
 set term pngcairo background "#ffffff" enhanced font "Arial-Bold, 10" fontscale 1.0 size 500, 500
 set output 'data.png'
 set title "Stretched Exponential (KWW) Curve"
 set xlabel "time_scale" rotate parallel
 set ylabel "simulated_trajectory" rotate parallel
-+ g(x) = a * exp(-(x/t)**b)
-+ fit g(x) "data_file" u (column(1)):(column(2)) via a,t,b
+
+g(x) = a * exp(-(x/t)**b)
+fit g(x) "data_file" u (column(1)):(column(2)) via a,t,b
+
 p g(x) lw 3, “data_file_1”, “data_file_2”, “data_file_3” …
