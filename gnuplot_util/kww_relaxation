@@ -10,6 +10,6 @@ set xlabel "time_scale" rotate parallel
 set ylabel "simulated_trajectory" rotate parallel
 
 g(x) = a * exp(-(x/t)**b)
-fit g(x) "data_file" u (column(1)):(column(2)) via a,t,b
+fit g(x) "data_file" u (column(1)):(column(2)) via a, t, b
 
 p g(x) lw 3, “data_file_1”, “data_file_2”, “data_file_3” …
