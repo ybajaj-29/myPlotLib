@@ -12,7 +12,7 @@ set ylabel "simulated_trajectory" rotate parallel
 set style line 1  lt 1 dt 1 pi 0 ps 1 # lt = color; pt = point type; dt = dash type; ps = size 
 set style line 2  lt 2 dt 1 pi 0 ps 1
 
-g(x) =  a * exp(-(x/t)**b)
+g(x) = a * exp(-(x/t)**b)
 fit g(x) "data_file" u (column(1)):(column(2)) via a,t,b
 
 set xtic
