@@ -2,7 +2,7 @@
 // Will be interfaced with Gnuplot.py
 ```diff
 
-gnuplot
++ gnuplot
 reset
 set term pngcairo background "#ffffff" enhanced font "Arial-Bold, 10" fontscale 1.0 size 500, 500
 set output 'data.png'
