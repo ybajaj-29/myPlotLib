@@ -11,7 +11,7 @@ set xlabel "time (fs)" rotate parallel
 set ylabel "Simulated S (q, t)" rotate parallel
 
 f(x) = exp(-(x/tau)**beta)
-tau = approx_fit; beta = approx_fit; fit g(x) “file_name” via tau, beta
+tau = [your_approx]; beta = [your_approx]; fit f(x) “file_name” via tau, beta
 
 set log x
-p g(x) lw 2, “file_name”
+p f(x) lw 3, “file_name”
