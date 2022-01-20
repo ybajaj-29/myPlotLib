@@ -1,5 +1,5 @@
-// Stretched Exponential (KWW) Function - Parametric Fitting
-// Will be interfaced with Gnuplot.py
+# Stretched Exponential (KWW) Function - Parametric Fitting
+# Will be interfaced with Gnuplot.py
 
 gnuplot
 reset session
