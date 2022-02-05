@@ -10,9 +10,9 @@ set title "Stretched Exponential (KWW) Curve Fit"
 set xlabel "time (fs)" rotate parallel
 set ylabel "Simulated S (q, t)" rotate parallel
 
-f(x) = exp(-(x/tau)**beta) # [if bulk contributions only]
+f(x) = exp(-(x/tau)**beta) # [for bulk contributions only]
 
-f(x) = (1-a) * exp(-(x/tau)**beta) + a * exp(-(x/tau2)**beta2) # [if bulk and bound contributions]
+f(x) = (1-a) * exp(-(x/tau)**beta) + a * exp(-(x/tau2)**beta2) # [for bulk and bound contributions]
 
 tau = your_approx; beta = your_approx; fit f(x) "file_name" via tau, beta
 
