@@ -1,5 +1,5 @@
 # Stretched Exponential (KWW) Function - Parametric Fitting
-# Will be interfaced with Gnuplot.py
+# Will be interfaced with Gnuplot.py (when I have time)
 
 gnuplot
 reset session
@@ -10,11 +10,11 @@ set title "Stretched Exponential (KWW) Curve Fit"
 set xlabel "time (fs)" rotate parallel
 set ylabel "Simulated S (q, t)" rotate parallel
 
-f(x) = exp(-(x/tau)**beta) # [if bulk contributions only]
+f(x) = exp(-(x/tau_kww)**beta) # [base function]
+f(x) = A * exp(-(x/tau1)**beta1) + (1-A) * exp(-(x/tau2)**beta2) # [double function]
 
-f(x) = (1-a) * exp(-(x/tau)**beta) + a * exp(-(x/tau2)**beta2) # [if bulk and bound contributions]
-
-tau = your_approx; beta = your_approx; fit f(x) "file_name" via tau, beta
+a1 = 1; tau1 = [guess]; beta1 = [guess]; tau2 = [guess]; beta2 = [guess]; fit f(x) "fsqt_q0.100.txt" via tau1, beta1, tau2, beta2, a1
+# S(q,0) = 1; there is no need to instantiate a second ‘a’ parameter.
 
 set log x
 p f(x) lw 3, "file_name.txt"
