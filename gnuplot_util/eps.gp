@@ -1,4 +1,5 @@
 # Enhanced EPS Output Terminal
+# because x11 didn't support superscripts/subscripts on axis labels
 
 gnuplot
 reset session
