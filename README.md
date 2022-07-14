@@ -1,3 +1,3 @@
 # -- myPlotLib --
-# Toolkit for research
+# General-purpose toolkit for research
 Redefining third-party software data analysis and visualization, one significantly-more-aesthetically-pleasing doohickey at a time.
