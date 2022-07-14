@@ -42,8 +42,8 @@ def graph_display(file_Name):
             plt.ylabel('S-parameter (dB)', labelpad=8, fontname='Arial', fontsize=12, fontweight='bold')
             plt.yticks(np.arange(max(s_param), min(s_param)-1, -2), fontsize=9)
             
-            print('\nMinimum S-parameter (dB): ' + str(min(s_param)))
-            print('Maximum S-parameter (dB): ' + str(max(s_param)))
+            print('\nMinimum S-parameter (dB): ' + str(round(min(s_param), 3)))
+            print('Maximum S-parameter (dB): ' + str(round(max(s_param), 3)))
             
             plt.show()
             freq.clear()
@@ -51,4 +51,4 @@ def graph_display(file_Name):
         
 # A typical file handle I manually save after running studies on COMSOL Multiphysics 5.5 (file_Name).
 # Usually designated by a date at the suffix so I don't lose track after hundreds of studies.
-graph_display('S11_param.txt')
+graph_display('S21_param.txt')
